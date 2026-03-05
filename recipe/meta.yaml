@@ -1,5 +1,5 @@
 {% set name = "sixabos" %}
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PhD-Gabriel-Caballero/6ABOS/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1f346884512d0d39b203f487037c1193a637880b65d8e418ea9eb78242bac6d8
+  sha256: 3594402aeeba9f2aaf6caf1668161027f24ea7611450a5ede5dc005a8dfe573c
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
   number: 0
   entry_points:
     - sixabos-run = sixabos.main:run_6abos
-  
+
 requirements:
   host:
     - python {{ python_min }}
@@ -32,8 +32,8 @@ requirements:
     - scipy
     - xmltodict
     - earthengine-api
-    - google-api-python-client  
-    - google-auth               
+    - google-api-python-client
+    - google-auth
 
 test:
   requires:
